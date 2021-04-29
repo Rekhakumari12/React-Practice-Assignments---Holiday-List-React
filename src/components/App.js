@@ -3,8 +3,8 @@ import React, { Component, useState } from "react";
 import '../styles/App.css';
 
 class App extends Component {
-  constructor(props) {
-    super(props)
+  constructor() {
+    super()
 
     this.cityList = [{ name: 'Goa', country: 'India' },
     { name: 'Amsterdam', country: 'Netherlands' },
@@ -38,13 +38,21 @@ class App extends Component {
   }
 
   render() {
+    let filteredData = this.cityList.filter((obj,i) => {
+      return obj.country.includes("India");
+     })
     return (
       <div id="main">
-        {/* Do not remove the main div */}
+        {/* <p>hello world</p> */}
+        <ol>
+        {
+          filteredData.map((data, i) => {
+            return <li key={`location${i+1}`}>{data.name}</li>
+          })
+          }
+        </ol>
       </div>
     )
   }
 }
-
-
 export default App;
