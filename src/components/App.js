@@ -38,9 +38,9 @@ class App extends Component {
   }
 
   render() {
-    let filteredData = this.cityList.filter((obj,i) => {
-      return obj.country.includes("India");
-     })
+//     let filteredData = this.cityList.filter((obj,i) => {
+//       return obj.country.includes("India");
+//      })
     return (
       <div id="main">
         <ol>
