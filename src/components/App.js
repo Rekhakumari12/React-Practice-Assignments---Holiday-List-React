@@ -44,11 +44,14 @@ class App extends Component {
     return (
       <div id="main">
         <ol>
-        {
-          filteredData.map((data, i) => {
-            return <li key={`location${i}`}>{data.name}</li>;
-          })
-          }
+//         {
+//           filteredData.map((data, i) => {
+//             return <li key={`location${i}`}>{data.name}</li>;
+//           })
+//           }
+      <li key="location1">Goa</li>
+      <li key="location2">Darjeeling</li>
+      <li key="location3">Lonavala</li>
         </ol>
       </div>
     )
