@@ -3,8 +3,8 @@ import React, { Component, useState } from "react";
 import '../styles/App.css';
 
 class App extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
 
     this.cityList = [{ name: 'Goa', country: 'India' },
     { name: 'Amsterdam', country: 'Netherlands' },
@@ -43,11 +43,10 @@ class App extends Component {
      })
     return (
       <div id="main">
-        {/* <p>hello world</p> */}
         <ol>
         {
           filteredData.map((data, i) => {
-            return <li key={`location${i+1}`}>{data.name}</li>
+            return <li key={`location${i}`}>{data.name}</li>;
           })
           }
         </ol>
